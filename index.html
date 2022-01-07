@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>واحد انبارداری میرچناری</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="mess"></div>
+
+    <header class="header-page">
+        <div class="header-container">
+            <h1>واحد انبارداری <span style="color: var(--color-primary);">میرچناری</span></h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-section">
+            <div class="main-container">
+                <form class="add" action="#">
+                    <div class="category">
+                        <label for="select-category">دسته‌بندی</label>
+                        <select id="select-category">
+                            <option value="none" selected>به کدوم دسته‌بندی اضافه کنم؟</option>
+                        </select>
+                        <a class="add-category">دسته‌ای که میخوای موجود نیست؟</a>
+                        <div class="input-add hidden">
+                            <input type="text" class="add-category-input">
+                            <button class="btn add-category-btn">اضافه کن</button>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <label for="product">محصول</label>
+                        <input id="product" type="text" placeholder="مثه: آچار فرانسه">
+                    </div>
+
+                    <div class="form-btn">
+                        <button class="btn add-product">اضافه کن</button>
+                    </div>
+                </form>
+
+                <div class="show">یه چیزی وارد کن مُردم از تنهایی...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
