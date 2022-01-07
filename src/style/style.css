@@ -178,4 +178,8 @@ h1{
     .main-container{
         padding: 0 50px;
     }
+
+    .input-add {
+        grid-template-columns: 2fr 1fr;
+    }
 }
