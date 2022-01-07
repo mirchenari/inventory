@@ -176,7 +176,7 @@ h1{
 
 @media (max-width: 500px) {
     .main-container{
-        padding: 0 50px;
+        padding: 0 20px;
     }
 
     .input-add {
