@@ -3,7 +3,7 @@
     src: url(../font/iranyekanwebregularfanum.ttf);
 }
 
-:root{
+:root {
     --color-primary: #8b5cf6;
     --color-secondly: #f5f3ff;
     --color-text: #64748b;
@@ -11,26 +11,26 @@
     --color-back-2: #f1f5f9;
 }
 
-:root{
+:root {
     color: var(--color-text);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'yekan';
 }
 
-h1{
+h1 {
     font-size: 25px;
 }
 
-.hidden{
+.hidden {
     display: none !important;
 }
 
-.mess{
+.mess {
     position: fixed;
     top: 20px;
     right: 40px;
@@ -47,23 +47,23 @@ h1{
     opacity: 0;
 }
 
-.mess.err{
+.mess.err {
     color: red;
     border-color: red;
 }
 
-.mess.suc{
+.mess.suc {
     color: green;
     border-color: green;
 }
 
-.mess.active{
+.mess.active {
     transform: translateX(0);
     opacity: 1;
 }
 
 /* header */
-.header-page{
+.header-page {
     display: flex;
     justify-content: center;
     padding: 20px 0;
@@ -71,51 +71,52 @@ h1{
 }
 
 /* main */
-.main-section{
+.main-section {
     display: flex;
     justify-content: center;
     padding: 50px 0;
 }
 
-.main-container{
+.main-container {
     flex-basis: 800px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 50px;
 }
 
-.add > div {
+.add > div  {
     display: grid;
     grid-template-rows: 1fr;
     margin-bottom: 20px;
 
 }
 
-.add input, .add select{
+.add input, .add select, #filter {
     padding: 15px 10px;
     margin: 5px 0;
     border: 1px solid var(--color-back-2);
     background-color: #fff;
     border-radius: 5px;
+    width: 100%;
     transition: 0.3s ease;
 }
 
-.add input:focus, .add select:focus{
+.add input:focus, .add select:focus, #filter:focus {
     outline: 0;
     border-color: var(--color-primary);
 }
 
-.add-category{
+.add-category {
     font-size: 14px;
     transition: 0.3s ease;
     cursor: pointer;
 }
 
-.add-category:hover{
+.add-category:hover {
     color: var(--color-primary);
 }
 
-.input-add{
+.input-add {
     display: grid;
     grid-template-columns: 5fr 1fr;
     padding: 10px;
@@ -125,11 +126,11 @@ h1{
     grid-gap: 20px;
 }
 
-.input-add > input{
+.input-add > input {
     margin: 0;
 }
 
-.btn{
+.btn {
     padding: 15px 0;
     border-width: 0;
     border-radius: 5px;
@@ -138,24 +139,70 @@ h1{
     cursor: pointer;
 }
 
-.show{
+.filter-show {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.filter > span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+#filter {
+    padding: 11px 10px;
+    padding-right: 35px;
+    font-size: 15px;
+}
+
+.show {
     background-color: var(--color-back-2);
     padding: 10px;
     border-radius: 15px;
     font-size: 15px;
+    flex-grow: 1;
 }
 
-.show > article > ul{
+.show > article > h3 {
+    position: relative;
+}
+
+span.delete ,span.edit {
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/delete.png');
+    background-size: cover;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+span.edit {
+    left: 40px;
+    background-image: url('../images/edit.png');
+}
+
+.show > article > ul {
     padding: 15px 30px;
     list-style-type: none;
 }
 
-.show > article > ul > li{
+.show > article > ul > li {
     position: relative;
     margin-bottom: 5px;
 }
 
-.show > article > ul > li::before{
+.show > article > ul > li::before {
     content: '';
     display: inline-block;
     width: 5px;
@@ -169,18 +216,18 @@ h1{
 
 /* responsive */
 @media (max-width: 1000px) {
-    .main-container{
+    .main-container {
         grid-template-columns: 1fr;
         padding: 0 100px;
     }
 }
 
 @media (max-width: 500px) {
-    .main-container{
+    .main-container {
         padding: 0 20px;
     }
 
-    .input-add {
+    .input-add  {
         grid-template-columns: 2fr 1fr;
     }
 }
